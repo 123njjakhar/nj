@@ -14,7 +14,10 @@ from os import getenv
 from dotenv import load_dotenv
 from pyrogram import filters
 
-load_dotenv()
+if os.path.exists("NJ"):
+  load_dotenv("NJ")
+
+# load_dotenv()
 
 # Get it from my.telegram.org
 API_ID = int(getenv("API_ID", ""))
